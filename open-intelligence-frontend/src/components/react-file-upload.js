@@ -5,18 +5,20 @@ import { InboxOutlined } from '@ant-design/icons';
 const { Dragger } = Upload;
 
 const props = {
-    name: 'file',
+    name: "file",
     multiple: false,
-    action: 'http://localhost:5000/detection/table',
+    accept: ".png,.jpg,.jpeg",
+    showUploadList: false,
+    action: "http://192.168.1.7:5000/detection/table",
     onChange(info) {
         const { status } = info.file;
-        if (status !== 'uploading') {
+        if (status !== "uploading") {
             console.log(info.file, info.fileList);
         }
-        if (status === 'done') {
+        if (status === "done") {
             message.success(`${info.file.name} file uploaded successfully.`);
         } 
-        else if (status === 'error') {
+        else if (status === "error") {
             message.error(`${info.file.name} file upload failed.`);
         }
     },
