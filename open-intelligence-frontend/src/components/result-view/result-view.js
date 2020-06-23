@@ -11,12 +11,14 @@ class ResultView extends React.Component {
     }
 
     render() {
-        const images = this.props.serverResult.processing.map(image => 
-            <ResultImage title={Object.keys(image)[0]} url={image[Object.keys(image)[0]]}></ResultImage>
-        )
+        console.log("props.serverResult: ")
+        console.log(this.props.serverResult)
         return (
             <div className="result">
-                {images}
+                <div>
+                    <ResultImage title="Original" url={this.props.serverResult["original"]}></ResultImage>
+                    <ResultImage title="Detected tables" url={this.props.serverResult["detected tables"]}></ResultImage>
+                </div>
             </div>
         )
     }

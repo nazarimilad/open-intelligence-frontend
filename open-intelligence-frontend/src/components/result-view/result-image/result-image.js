@@ -10,8 +10,8 @@ class ResultImage extends React.Component {
             <div className="resultImage">
                 <Card
                     hoverable
-                    style={{ width: 540 }}
                     cover={<img alt={this.props.title} src={this.props.url} />}
+                    className="card"
                 >
                     <Meta title={this.props.title}></Meta>
                 </Card>

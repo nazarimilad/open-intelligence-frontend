@@ -1,11 +1,12 @@
+
 import React from 'react'
 import { Upload, message } from 'antd';
 import { InboxOutlined } from '@ant-design/icons';
-import "./upload.scss"
+import "./file-upload.scss"
 
 const { Dragger } = Upload;
 
-class SimpleReactFileUpload extends React.Component {
+class FileUpload extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -46,4 +47,4 @@ class SimpleReactFileUpload extends React.Component {
     }
 }
 
-export default SimpleReactFileUpload;
+export default FileUpload;

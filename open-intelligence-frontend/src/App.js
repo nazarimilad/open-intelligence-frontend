@@ -1,7 +1,7 @@
 import React from 'react';
 import "../node_modules/antd/dist/antd.css";
 import './App.scss';
-import SimpleReactFileUpload from "./components/react-file-upload";
+import { FileUpload } from "./components/file-upload/"
 import { ResultView } from "./components/result-view";
 
 class App extends React.Component {
@@ -25,7 +25,7 @@ class App extends React.Component {
     }
     return (
       <div className="App">
-        <SimpleReactFileUpload callbackFromParent={this.uploadCallback}></SimpleReactFileUpload>
+        <FileUpload callbackFromParent={this.uploadCallback}></FileUpload>
         {result}
       </div>
     );
