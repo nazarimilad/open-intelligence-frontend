@@ -14,7 +14,7 @@ class FileUpload extends React.Component {
         multiple: false,
         accept: ".png,.jpg,.jpeg",
         showUploadList: false,
-        action: "http://localhost:5000/detection/table",
+        action: "http://192.168.1.7:5000/detection/table",
         onChange(info) {
             const { status } = info.file;
             if (status !== "uploading") {
@@ -33,6 +33,7 @@ class FileUpload extends React.Component {
     render() {
         return (
             <div className="upload">
+                <h1>1. Upload</h1>
                 <Dragger {...this.state}>
                     <p className="ant-upload-drag-icon">
                         <InboxOutlined />
