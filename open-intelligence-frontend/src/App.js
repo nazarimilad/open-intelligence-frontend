@@ -14,8 +14,6 @@ class App extends React.Component {
 
   uploadCallback = (uploadData) => {
     this.setState({ serverResult: uploadData });
-    console.log(this.state.serverResult)
-    this.render()
   }
 
   render() {
